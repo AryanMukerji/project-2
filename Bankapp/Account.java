@@ -19,7 +19,10 @@ public abstract class Account implements IntrestRate {
 		index++;
 		this.Accountnumber = setaccountnumber();
 		// System.out.println("ACCOUNT NUMBER: " + this.Accountnumber);
+		 setrate();// polymorfism acchived
 	}
+	public abstract void setrate();// becuse we can not define the rate from just account class sop we have to make
+									// methods available in checking and savings class too
 
 	private String setaccountnumber() {
 		String lasttwopin = pin.substring(pin.length() - 3, pin.length());
@@ -30,7 +33,7 @@ public abstract class Account implements IntrestRate {
 
 	// list common methods
 	public void showifo() {
-		System.out.println("NAME: " + name + "\nAccount number: " + Accountnumber + "\nBalance: " + balance);
+		System.out.println("NAME: " + name + "\nAccount number: " + Accountnumber + "\nBalance: " + balance+ "\nRate: " + rate);
 	}
 }
 
