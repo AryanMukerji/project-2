@@ -13,6 +13,11 @@ public class Savings extends Account {
 		setsafetydepoitebox();
 
 	}
+	@Override
+	public void setrate() {
+		rate = getbaserate() * 1.5;
+
+	}
 
 	private void setsafetydepoitebox() {
 		safteyid = (int) (Math.random() * Math.pow(10, 3));
