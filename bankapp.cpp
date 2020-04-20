@@ -17,7 +17,9 @@ public:
 	void report() const;	//functioon to show data
 	int retacno() const;	//function to return amount 
 	int retdeposit() const;	//function to return balance
-	char rettype() const;	//function to return type of accountvoid account::create_account()
+	char rettype() const;	//function to return type of account
+};
+ 	void account::create_account()
 {
 	cout<<"\nEnter The account No. :";
 	cin>>acno;
@@ -41,6 +43,6 @@ void account::show_account() const
 	cout<<"\nBalance amount : "<<deposit;
 }
  
-};
+
 
 
