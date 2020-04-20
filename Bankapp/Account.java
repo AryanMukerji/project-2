@@ -32,6 +32,22 @@ public abstract class Account implements IntrestRate {
 	}
 
 	// list common methods
+	public void deposite(double amount) {
+		balance = balance + amount;
+		System.out.println("Depositing: " + amount + "\nNew balance: " + balance);
+	}
+
+	public void withdraw(double amount) {
+		balance = balance = amount;
+		System.out.println("Withdrawing: " + amount + "\nRemaining balance: " + balance);
+
+	}
+
+	public void transfer(String destination, double amount) {
+		balance = balance - amount;
+		System.out.println("Transfering: " + amount + " " + "TO: " + destination + "\nRemaining balance: " + balance);
+	}
+
 	public void showifo() {
 		System.out.println("NAME: " + name + "\nAccount number: " + Accountnumber + "\nBalance: " + balance+ "\nRate: " + rate);
 	}
