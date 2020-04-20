@@ -12,6 +12,10 @@ public class checking extends Account {
 //		System.out.println("ACCOUNT NUMBER: " + this.Accountnumber);
 		setdebitcard();
 	}
+	@Override // so that we can implement the unimplemented methods in savings account to
+	public void setrate() {
+		rate = getbaserate() * .15;
+	}
 
 	// list any methods specific to checking account
 	private void setdebitcard() {
