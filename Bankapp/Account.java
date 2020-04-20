@@ -30,22 +30,31 @@ public abstract class Account implements IntrestRate {
 		int randnum = (int) ((int) Math.random() * Math.pow(10, 3));
 		return lasttwopin + uniqueID + randnum;
 	}
+	public void compoundintrest() {
+		double intrest = balance * (rate / 100);
+		balance = balance + intrest;
+		System.out.println("Intrest: " + intrest);
+		balance();
+	}
 
 	// list common methods
 	public void deposite(double amount) {
 		balance = balance + amount;
-		System.out.println("Depositing: " + amount + "\nNew balance: " + balance);
+		System.out.println("Depositing: " + amount);
+		balance();
 	}
 
 	public void withdraw(double amount) {
 		balance = balance = amount;
-		System.out.println("Withdrawing: " + amount + "\nRemaining balance: " + balance);
+		System.out.println("Withdrawing: " + amount);
+		balance();
 
 	}
 
 	public void transfer(String destination, double amount) {
 		balance = balance - amount;
-		System.out.println("Transfering: " + amount + " " + "TO: " + destination + "\nRemaining balance: " + balance);
+		System.out.println("Transfering: " + amount + " " + "TO: " + destination);
+		balance();
 	}
 
 	public void showifo() {
