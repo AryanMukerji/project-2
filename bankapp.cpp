@@ -34,7 +34,7 @@ public:
 	cout<<"\n\n\nAccount Created..";
 }
 
-void account::show_account() const
+	void account::show_account() const
 {
 	cout<<"\nAccount No. : "<<acno;
 	cout<<"\nAccount Holder Name : ";
@@ -42,6 +42,30 @@ void account::show_account() const
 	cout<<"\nType of Account : "<<type;
 	cout<<"\nBalance amount : "<<deposit;
 }
+void account::modify()
+{
+	cout<<"\nAccount No. : "<<acno;
+	cout<<"\nModify Account Holder Name : ";
+	cin.ignore();
+	cin.getline(name,50);
+	cout<<"\nModify Type of Account : ";
+	cin>>type;
+	type=toupper(type);
+	cout<<"\nModify Balance amount : ";
+	cin>>deposit;
+}
+
+
+void account::dep(int x)
+{
+	deposit+=x;
+}
+
+void account::draw(int x)
+{
+	deposit-=x;
+}
+
  
 
 
