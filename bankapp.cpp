@@ -96,7 +96,7 @@ void display_all();		//function to display all account details
 void deposit_withdraw(int, int); // function to desposit/withdraw amount for given account
 void intro();	//introductory screen function
 
-int main()
+int main()          //main funtion 
 {
 	char ch;
 	int num;
@@ -155,7 +155,7 @@ int main()
 	return 0;
 }
 
-void write_account()
+void write_account()      //function to write in a file 
 {
 	account ac;
 	ofstream outFile;
@@ -165,7 +165,7 @@ void write_account()
 	outFile.close();
 }
 
-void display_sp(int n)
+void display_sp(int n)     //function to read a specific record of file
 {
 	account ac;
 	bool flag=false;
@@ -191,7 +191,7 @@ void display_sp(int n)
 		cout<<"\n\nAccount number does not exist";
 }
 
-void modify_account(int n)
+void modify_account(int n)      //function to modify record of file 
 {
 	bool found=false;
 	account ac;
@@ -222,7 +222,7 @@ void modify_account(int n)
 		cout<<"\n\n Record Not Found ";
 }
 
-void delete_account(int n)
+void delete_account(int n)         //function to delete record of file 
 {
 	account ac;
 	ifstream inFile;
@@ -249,7 +249,7 @@ void delete_account(int n)
 	cout<<"\n\n\tRecord Deleted ..";
 }
 
-void display_all()
+void display_all()     //function to display list of account details 
 {
 	account ac;
 	ifstream inFile;
@@ -270,7 +270,7 @@ void display_all()
 	inFile.close();
 }
 
-void deposit_withdraw(int n, int option)
+void deposit_withdraw(int n, int option) //function to deposit and withdraw 
 {
 	int amt;
 	bool found=false;
@@ -318,7 +318,7 @@ void deposit_withdraw(int n, int option)
 		cout<<"\n\n Record Not Found ";
 }
 
-void intro()
+void intro()     //introdunction function
 {
 	cout<<"\n\n\n\t  BANK";
 	cout<<"\n\n\tMANAGEMENT";
